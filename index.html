@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exclusive 5 Offers Landing Page</title>
+
+<!-- Tracking Scripts Placeholder -->
+<!-- Example: Google Ads / Facebook Pixel / custom tracker -->
+<!-- <script src="YOUR_TRACKER.js"></script> -->
+
+<style>
+  /* Reset & Base */
+  * {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
+  body {background:#f5f7fa; color:#333;}
+  a {text-decoration:none; color:inherit;}
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color:#fff; text-align:center; padding:60px 20px 40px;
+  }
+  header h1 {font-size:2.8rem; margin-bottom:15px;}
+  header p {font-size:1.2rem; margin-bottom:30px;}
+  .cta-button {
+    background: linear-gradient(to right,#ff7e5f,#feb47b);
+    color:#fff; padding:15px 35px; font-size:1.2rem;
+    border:none; border-radius:50px; cursor:pointer; transition:0.3s ease;
+  }
+  .cta-button:hover {transform:scale(1.05); box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+
+  /* Offers Section */
+  .offers {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px; padding:50px 20px; max-width:1200px; margin:auto;
+  }
+  .offer-card {
+    background:#fff; border-radius:20px; overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1); transition:transform 0.3s ease, box-shadow 0.3s ease;
+    display:flex; flex-direction:column;
+  }
+  .offer-card:hover {transform:translateY(-10px); box-shadow:0 15px 30px rgba(0,0,0,0.2);}
+  .offer-card img {width:100%; height:180px; object-fit:cover;}
+  .offer-card-content {padding:25px; flex-grow:1; text-align:center;}
+  .offer-card-content h3 {font-size:1.6rem; margin-bottom:10px; color:#333;}
+  .offer-card-content p {font-size:1rem; margin-bottom:20px; color:#666;}
+  .offer-card-content .btn {
+    display:inline-block; background:#667eea; color:#fff; padding:12px 25px;
+    border-radius:50px; font-weight:bold; transition:0.3s ease;
+  }
+  .offer-card-content .btn:hover {background:#764ba2; transform:scale(1.05); box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+
+  /* Modal */
+  .modal {position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7);
+    display:flex; justify-content:center; align-items:center; opacity:0; pointer-events:none; transition:0.3s;}
+  .modal.active {opacity:1; pointer-events:all;}
+  .modal-content {background:#fff; padding:40px; border-radius:20px; text-align:center; max-width:500px; width:90%; position:relative;}
+  .modal-content h2 {margin-bottom:20px;}
+  .modal-content .close-btn {position:absolute; top:15px; right:20px; font-size:1.5rem; cursor:pointer; background:none; border:none;}
+  .modal-content .btn {margin-top:15px;}
+
+  /* Footer */
+  footer {text-align:center; padding:30px 20px; background:#333; color:#fff;}
+
+  /* Responsive */
+  @media(max-width:768px){
+    header h1{font-size:2rem;}
+    header p{font-size:1rem;}
+    .offer-card img{height:150px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Unlock 5 Exclusive Offers Today!</h1>
+  <p>Grab USA gift cards, digital downloads, and special bonuses — limited time only!</p>
+  <button class="cta-button" onclick="openModal()">Claim Your Bonus Offer</button>
+</header>
+
+<section class="offers">
+  <!-- Offer 1 -->
+  <div class="offer-card">
+    <img src="https://pixabay.com/get/g5fef7421d3e3e55c4ddfb0d66d26e851d4ba4eda5346e1f3fc8d63ac26c8bcf179c6700b9763d3c28fbc1c1902c50285b49d3afce7ab5aba874392bca6574bbd4_640.jpg" alt="USA Gift Card">
+    <div class="offer-card-content">
+      <h3>$50 USA Gift Card</h3>
+      <p>Instantly claim a $50 gift card redeemable in the USA. Fast and easy to use online.</p>
+      <a href="https://www.effectivegatecpm.com/vgpaj4vh2g?key=7d41ab8b102ace891616fbfc09ee1d74" class="btn" target="_blank">Claim Now</a>
+    </div>
+  </div>
+
+  <!-- Offer 2 -->
+  <div class="offer-card">
+    <img src="https://pixabay.com/get/gd7cb5734485d62a85dcf3636e088c1343980e8f31d9fc758b08ba14491595ca2bfd862f495dd99525600f0c6c63fc6bc8ab04b070dfedb61b3e0d973771d52a3_640.jpg" alt="Digital Toolkit">
+    <div class="offer-card-content">
+      <h3>Premium Digital Toolkit</h3>
+      <p>Download templates, graphics, and essential digital tools to boost productivity.</p>
+      <a href="https://www.effectivegatecpm.com/vgpaj4vh2g?key=7d41ab8b102ace891616fbfc09ee1d74" class="btn" target="_blank">Get Yours</a>
+    </div>
+  </div>
+
+  <!-- Offer 3 -->
+  <div class="offer-card">
+    <img src="https://pixabay.com/get/g422f8566d3cad047cead5c48e9f8d780db639dd85c62b4739f7e963fc582b5a38f25106dd54dbb613f75d64da526897e2df2edceba8fc74a25ea42c1b2796093_640.jpg" alt="E-Book Bundle">
+    <div class="offer-card-content">
+      <h3>E-Book Bundle</h3>
+      <p>Access a set of 10+ high-value eBooks on business, marketing, and self-improvement.</p>
+      <a href="https://www.effectivegatecpm.com/vgpaj4vh2g?key=7d41ab8b102ace891616fbfc09ee1d74" class="btn" target="_blank">Grab Now</a>
+    </div>
+  </div>
+
+  <!-- Offer 4 -->
+  <div class="offer-card">
+    <img src="https://pixabay.com/get/ge4fa6aeeeb9d6c1badd2edcb34f4f39ada2f90103d477a73a28be4bfdb1041df5ef52c69ed48c5d981b09cd4a23b5cfc3ced9b62aa0ce24c4ec8569fc26569cef_640.jpg" alt="Mini Online Course">
+    <div class="offer-card-content">
+      <h3>Mini Online Course</h3>
+      <p>Enroll in a short practical course to quickly learn and improve your skills.</p>
+      <a href="https://www.effectivegatecpm.com/vgpaj4vh2g?key=7d41ab8b102ace891616fbfc09ee1d74" class="btn" target="_blank">Enroll Now</a>
+    </div>
+  </div>
+
+  <!-- Offer 5 -->
+  <div class="offer-card">
+    <img src="https://pixabay.com/get/gab0bc899e2a1e5fdd9d7f56b8f0fae1f962b98dfef0fbf545e78af1e46ffb9f9ce6b1f6e8309492bc7db76b6d5cfe45d59b83e8b7274a202280f0f81b815367e_640.jpg" alt="Special Bonus">
+    <div class="offer-card-content">
+      <h3>Special Bonus Offer</h3>
+      <p>Unlock a unique bonus available only for visitors of this page. Don’t miss it!</p>
+      <a href="https://www.effectivegatecpm.com/vgpaj4vh2g?key=7d41ab8b102ace891616fbfc09ee1d74" class="btn" target="_blank">Claim Bonus</a>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  &copy; 2025 Your Company Name. All rights reserved.
+</footer>
+
+<script>
+  // Modal Logic
+  const modal = document.getElementById('specialModal');
+  function openModal(){ modal.classList.add('active'); }
+  function closeModal(){ modal.classList.remove('active'); }
+
+  // Optional: auto-open modal after 8 seconds
+  // setTimeout(openModal,8000);
+</script>
+
+</body>
+</html>
